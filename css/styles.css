@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   font-family: sans-serif;
 }
@@ -33,11 +34,11 @@ p {
 .content {
   display: grid;
   height: 100%;
-  grid-template-columns:1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-            "header"
-            "main"
-            "footer";
+    "header"
+    "main"
+    "footer";
   grid-template-rows: auto 1fr 80px;
 }
 
@@ -53,15 +54,16 @@ header {
   letter-spacing: 7px;
 }
 
-.logo, nav {
+.logo,
+nav {
   flex: 1;
 }
 
-nav li{
+nav li {
   list-style: none;
 }
 
-nav ul{
+nav ul {
   display: flex;
   justify-content: space-around;
 
@@ -79,18 +81,21 @@ section {
   align-items: center;
 }
 
-/* .cards {
+.cards {
+  -webkit-box-shadow: 0px 4px 28px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 28px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 28px -6px rgba(0, 0, 0, 0.75);
   border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
   overflow: hidden;
-  &:hover {
-    .card__image {
-      filter: contrast(100%);
-    }
-  }
-} */
+}
 
-.cards > img {
+.cards> img:hover {
+  border-radius: 20px;
+}
+
+
+
+.cards>img {
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -100,18 +105,18 @@ section {
   transition: all .4s ease;
 }
 
-.header-cards{
+.header-cards {
   justify-content: center;
   letter-spacing: 4px;
 }
 
-.cards > img:hover {
+.cards>img:hover {
   filter: saturate(100%);
 }
 
 
 
-section > .cards {
+section>.cards {
   border: 1px solid #f1f1f1;
   padding: 1em;
   margin: 2em;
@@ -119,7 +124,7 @@ section > .cards {
 }
 
 /* Footer */
-footer {
+#goBack {
   grid-area: footer;
   display: flex;
   align-items: center;
@@ -127,6 +132,34 @@ footer {
   flex: 1;
 }
 
-.title-section{
+.title-section {
+  display: flex;
+  justify-content: center;
+  background: #2EC4B6;
+  padding: 20px;
+}
 
+#page-footer {
+  background-color: #2EC4B6;
+  text-align: center;
+  padding: 1em;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 1px;
+  color: #000;
+}
+
+#page-footer a {
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  line-height: 1;
+  color: #000;
+  text-align: center;
+  padding: 1em;
+}
+
+#page-footer a:hover {
+  color: #ccc;
 }
