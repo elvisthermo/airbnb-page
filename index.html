@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arbinbi page</title>
     <link rel="stylesheet" href="css/styles.css">
+
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUQvK-rDwNsT3IMdoQO_12r3R1frmAMs8">
+    </script>
+
 </head>
 
 <body class="content">
     <header>
+        <h1>Airbnb </h1>
         <div class="logo">
-            <h1>Airbnb </h1>
         </div>
-        <nav>
+        <nav class="menu">
             <ul>
                 <li><a href="#section-Apartamento">Apartamentos</a></li>
                 <li><a href="#section-Casa">Casas</a></li>
@@ -22,11 +27,11 @@
                 <li><a href="#section-Loft">Loft</a></li>
                 <li><a href="#section-Quarto">Quartos</a></li>
                 <li><a href="#section-Sítio">Sítios</a></li>
+                <li><a href="#map_canvas">Localizações</a></li>
 
             </ul>
         </nav>
     </header>
-
 
     <main>
 
@@ -61,6 +66,9 @@
     </main>
 
 
+    <div id="map_canvas" style="width:100%; height:700px"></div>
+
+    <script src="js/main.js"></script>
     <footer id="goBack">
         <header>
             <h2><a href="#">Voltar ao topo</a></h2>
@@ -74,9 +82,7 @@
             <img src="./css/img/github.png" alt="">
         </a>
     </footer>
-    <script src="js/main.js"></script>
 
 </body>
-
 
 </html>
