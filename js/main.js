@@ -1,5 +1,5 @@
 window.onload = async function () {
-    const arbanbiApi = await fetch("https://my.api.mockaroo.com/airbnbgamaacademy.json?key=4fbeba30")
+    const arbanbiApi = await fetch("https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72")
         .then(res => res.json())
         .then(data => {
             return data;
