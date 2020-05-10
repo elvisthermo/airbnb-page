@@ -8,6 +8,16 @@ window.onload = async function () {
             throw err;
         });
 
+    const arbanbiLocation = await fetch("https://api.jsonbin.io/b/5eb844ae47a2266b14762c0b")
+        .then(res => res.json())
+        .then(data => {
+            return data;
+        })
+        .catch(err => {
+            throw err;
+        });
+
+
     function createCards() {
         arbanbiApi.map((result) => {
             let id = `section-${result.property_type}`;
@@ -48,7 +58,7 @@ window.onload = async function () {
             mapOptions);
 
 
-        arbanbiApi.map((ponto, index) => {
+        arbanbiLocation.map((ponto, index) => {
 
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(ponto.latitude, ponto.longitude),
@@ -62,4 +72,7 @@ window.onload = async function () {
 
     createCards();
     locationMaps();
+
+    let view = document.getElementById("cardsContainer")
+    view.style.display = "block";
 }
